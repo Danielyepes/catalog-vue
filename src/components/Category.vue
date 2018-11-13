@@ -28,7 +28,7 @@ localStorage.tittle = "Category"
         "url": "https://octopux.app/api/v1/shopity/collection", 
         "data": {
           octopux_token: "f550a68b-21ff-4b33-aa04-bff68023acca",
-          collection_id: this.number
+          collection_id: number
         },
         "headers": { "content-type": "application/json" } 
         }).then(result => {
