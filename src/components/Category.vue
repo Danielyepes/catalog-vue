@@ -24,12 +24,11 @@ localStorage.tittle = "Category"
   export default {
     methods: {
   getcatalog: function(number) {
-    console.log(number);
     axios({ method: "POST", 
         "url": "https://octopux.app/api/v1/shopity/collection", 
         "data": {
           octopux_token: "f550a68b-21ff-4b33-aa04-bff68023acca",
-          collection_id: number
+          collection_id: this.number
         },
         "headers": { "content-type": "application/json" } 
         }).then(result => {
@@ -42,6 +41,7 @@ localStorage.tittle = "Category"
     }
   },
     data: () => ({
+      number : 78993358966,
       categories: [{
         name: "Jeans",
         collection_id: 78993358966

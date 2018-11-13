@@ -22,7 +22,7 @@
 </template>
 
 <script>
-    localStorage.tittle = "Catalogo";
+    localStorage.tittle = "Catálogo";
 export default {
   data() {
     return {
