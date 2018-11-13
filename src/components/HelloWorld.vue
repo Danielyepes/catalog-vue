@@ -1,58 +1,78 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <v-layout>
+
+    <v-flex xs12>
+
+      <div class="v-card theme--light" v-for="(category, i) in categories" :key="i" style="margin-top: 20px;">
+        <div class="v-responsive v-image">
+          <div class="v-responsive__sizer" style="padding-bottom: 44.2882%;">
+          </div>
+<v-img :src="'https://mitienda.moda/img/categories/'+ category.collection_id + '.jpg'" width="100%" @click="getcatalog('{{category.collection_id}}')"></v-img>
+          <div class="v-responsive__content">
+
+          </div>
+        </div>
+      </div>
+
+    </v-flex>
+  </v-layout>
+
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  export default {
+    data: () => ({
+      categories: [{
+        name: "Jeans",
+        collection_id: 78993358966
+      }, {
+        name: "Fajas",
+        collection_id: 83403636854
+      }, {
+        name: "Prendas Control",
+        collection_id: 80160456822
+      }, {
+        name: "Compresión Suave",
+        collection_id: 83403440246
+      }, {
+        name: "Ropa Interior",
+        collection_id: 83252379766
+      }, {
+        name: "Leggings",
+        collection_id: 83478380662
+      }, {
+        name: "Shorts",
+        collection_id: 79978496118
+      }, {
+        name: "Sport Life",
+        collection_id: 83403341942
+      }, {
+        name: "Acero",
+        collection_id: 79000338550
+      }, {
+        name: "Oro Laminado 18K",
+        collection_id: 78993653878
+      }, {
+        name: "Oro – Plata",
+        collection_id: 78993719414
+      }, {
+        name: "Plata Ley 925",
+        collection_id: 79000404086
+      }]
+    })
   }
-}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
+  .theme--light.v-card {
+    margin-bottom: 10px;
+  }
+
+  .v-toolbar {
+    color: #fff !important
+  }
+
+  .v-btn__content {
+    color: #fff;
+  }
 </style>
