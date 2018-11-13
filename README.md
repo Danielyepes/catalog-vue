@@ -2,6 +2,9 @@
 Catalog with Vue js and vuetify
 
 ## Project setup
+project need vue-cli dependency
+https://cli.vuejs.org/
+
 ```
 npm install
 ```
