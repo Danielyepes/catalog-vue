@@ -41,7 +41,6 @@ localStorage.tittle = "Category"
     }
   },
     data: () => ({
-      number : 78993358966,
       categories: [{
         name: "Jeans",
         collection_id: 78993358966
