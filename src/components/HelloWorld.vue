@@ -7,12 +7,11 @@
         <div class="v-responsive v-image">
           <div class="v-responsive__sizer" style="padding-bottom: 44.2882%;">
           </div>
-<v-img :src="'https://mitienda.moda/img/categories/'+ category.collection_id + '.jpg'" width="100%" @click="getcatalog('{{category.collection_id}}')"></v-img>
-          <div class="v-responsive__content">
+      <v-img :src="'https://mitienda.moda/img/categories/'+ category.collection_id + '.jpg'" width="100%"  @click="getcatalog(category.collection_id)"></v-img>
+          <v-responsive></v-responsive>
 
           </div>
         </div>
-      </div>
 
     </v-flex>
   </v-layout>
@@ -20,7 +19,28 @@
 </template>
 
 <script>
+  import axios from "axios";
+
   export default {
+    methods: {
+  getcatalog: function(number) {
+    console.log(number);
+    axios({ method: "POST", 
+        "url": "https://octopux.app/api/v1/shopity/collection", 
+        "data": {
+          octopux_token: "f550a68b-21ff-4b33-aa04-bff68023acca",
+          collection_id: number
+        },
+        "headers": { "content-type": "application/json" } 
+        }).then(result => {
+          this.response = result.data;
+          this.$router.push('/catalog')
+          localStorage.catalog = JSON.stringify(this.response)
+        }, error => {
+            console.error(error);
+        });
+    }
+  },
     data: () => ({
       categories: [{
         name: "Jeans",

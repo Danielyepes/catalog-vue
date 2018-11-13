@@ -17,42 +17,22 @@
     </v-toolbar>
 
     <v-content fluid style="padding: 56px 0px 0px;">
-      <HelloWorld/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  },
   data () {
     return {
       //
-    }
-  },
-  methods: {
-  getcatalog: function() {
-    // this.$http.post("https://octopux.app/api/v1/shopity/collection", {
-    //     octopux_token: "f550a68b-21ff-4b33-aa04-bff68023acca",
-    //     collection_id: number
-    // }).then(function(t) {
-    //     console.log(t);
-    // }
-    // .bind(this)).catch(function(t) {
-    //     console.log(t)
-    // }
-    // .bind(this))
-
     }
   }
 }
 </script>
 
 <style>
-
 </style>
