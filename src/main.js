@@ -2,7 +2,7 @@ import Vue from 'vue'
 import './plugins/vuetify'
 import './plugins/vuetify'
 import App from './App.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Category from './components/Category.vue'
 import Catalog from './components/Catalog.vue'
 import Vuerouter from 'vue-router'
 
@@ -12,7 +12,7 @@ Vue.use(Vuerouter);
 
 const routes = [{
     path: "/",
-    component: HelloWorld
+    component: Category
   },
   {
     path: "/catalog",

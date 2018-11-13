@@ -25,7 +25,8 @@
 export default {
   data() {
     return {
-      msg: JSON.parse(localStorage.catalog)
+      msg: JSON.parse(localStorage.catalog),
+      tittle: "Catalogo"
     };
   }
 };
