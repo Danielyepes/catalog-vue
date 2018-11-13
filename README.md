@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # catalogo
 
 ## Project setup
@@ -27,3 +28,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# catalog-vue
+Catalog with Vue js and vuetify
+>>>>>>> 7929db7e947b040cb394b5a65988547d3adfe3b4
