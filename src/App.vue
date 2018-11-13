@@ -4,7 +4,7 @@
     color="pink lighten-2" app>
     <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-normal">
-        <span>Catalogo</span>
+        <span>{{tittle}}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
           <v-btn icon>
@@ -28,7 +28,7 @@
 export default {
   data () {
     return {
-      //
+      tittle: localStorage.tittle
     }
   }
 }

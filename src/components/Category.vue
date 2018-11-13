@@ -20,7 +20,7 @@
 
 <script>
   import axios from "axios";
-
+localStorage.tittle = "Category"
   export default {
     methods: {
   getcatalog: function(number) {
@@ -79,7 +79,7 @@
         name: "Plata Ley 925",
         collection_id: 79000404086
       }]
-    })
+    }),
   }
 </script>
 

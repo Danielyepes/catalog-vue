@@ -22,11 +22,11 @@
 </template>
 
 <script>
+    localStorage.tittle = "Catalogo";
 export default {
   data() {
     return {
       msg: JSON.parse(localStorage.catalog),
-      tittle: "Catalogo"
     };
   }
 };
